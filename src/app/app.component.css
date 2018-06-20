@@ -1,0 +1,12 @@
+.titleApp {
+  background-color :rgb(236,236,236);
+  background-image: url("https://www.howtogeek.com/wp-content/uploads/2011/04/digitalbookimage.jpg.pagespeed.ce.D6kWRr6WL3.jpg");
+  background-position: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.registerclass {
+  padding-top: 40px;
+
+}

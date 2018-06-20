@@ -1,0 +1,23 @@
+
+    <label> Student  First name </label>
+    <input #firstname type="text" placeholder="" maxlength="16" (keyup)= "validateFirstName(firstname.value)" required>
+
+    <label> Student  Last name </label>
+    <input #lastname type="text" placeholder="" maxlength="16" (keyup)= "validateLastName(lastname.value)" required>
+
+    <label> Student  Email-ID </label>
+    <input #email type="email" placeholder="" (keyup)= "validateEmail(email.value)" required>
+
+    <label> Department </label>
+
+    <select #department (change)="validateDepartment(department.value)" >
+    <option><option>
+      <option *ngFor = "let item of departments"
+      value = "{{item | uppercase}}"> {{item | uppercase}}</option>
+    </select>
+
+    <label> Course Name </label>
+    <input #course type="text" placeholder="Enter Course Name" (keyup)= "validateCourse(course.value)">
+
+    <button class='btn btn-success' (click)="onSubmit()" [disabled]="!validateSubmit()"> Register </button>
+    <button class='btn btn-default' id="cancelButton" (click)="firstname.value='';lastname.value='';email.value='';department.value='';course.value=''"> Cancel </button>
